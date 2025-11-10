@@ -20,34 +20,34 @@ public class DFT2Client implements ClientModInitializer {
 
         // Register models for slabs_cube in all three orientations
         // Y axis (vertical) - bottom slab and top slab
-        api.addTemplateModel(
-                DFT2.id("slabs_cube_y_special"),
-                new UnbakedDualRetexturedModel(
-                        Identifier.of("minecraft", "block/slab"),
-                        Identifier.of("minecraft", "block/slab_top")
-                )
-        );
+//        api.addTemplateModel(
+//                DFT2.id("slabs_cube_y_special"),
+//                new UnbakedDualRetexturedModel(
+//                        Identifier.of("minecraft", "block/slab"),
+//                        Identifier.of("minecraft", "block/slab_top")
+//                )
+//        );
 
         // Z axis (north-south) - front slab and back slab
-        api.addTemplateModel(
-                DFT2.id("slabs_cube_z_special"),
-                new UnbakedDualRetexturedModel(
-                        Identifier.of("minecraft", "block/slab"),
-                        Identifier.of("minecraft", "block/slab_top")
-                )
-        );
+//        api.addTemplateModel(
+//                DFT2.id("slabs_cube_z_special"),
+//                new UnbakedDualRetexturedModel(
+//                        Identifier.of("minecraft", "block/slab"),
+//                        Identifier.of("minecraft", "block/slab_top")
+//                )
+//        );
 
         // X axis (east-west) - left slab and right slab
-        api.addTemplateModel(
-                DFT2.id("slabs_cube_x_special"),
-                new UnbakedDualRetexturedModel(
-                        Identifier.of("minecraft", "block/slab"),
-                        Identifier.of("minecraft", "block/slab_top")
-                )
-        );
+//        api.addTemplateModel(
+//                DFT2.id("slabs_cube_x_special"),
+//                new UnbakedDualRetexturedModel(
+//                        Identifier.of("minecraft", "block/slab"),
+//                        Identifier.of("minecraft", "block/slab_top")
+//                )
+//        );
 
         // Assign item model using Templates API
-        api.assignItemModel(DFT2.id("slabs_cube_y_special"), DFT2.SLABS_CUBE);
+//        api.assignItemModel(DFT2.id("slabs_cube_y_special"), DFT2.SLABS_CUBE);
 
         DFT2.LOGGER.info("DFT2 client initialized successfully!");
     }

@@ -1,16 +1,7 @@
 {
   "variants": {
-    "axis=x": {
-      "model": "dft2:slabs_cube_x_special",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
-      "model": "dft2:slabs_cube_y_special"
-    },
-    "axis=z": {
-      "model": "dft2:slabs_cube_z_special",
-      "x": 90
-    }
+    "axis=x": { "model": "dft2:block/slabs_cube_x_special", "x": 90, "y": 90 },
+    "axis=y": { "model": "dft2:block/slabs_cube_y_special" },
+    "axis=z": { "model": "dft2:block/slabs_cube_z_special", "x": 90 }
   }
 }
