@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * An unbaked model that creates a DualRetexturingBakedModel with two separate parent models.
+ * Unbaked model that creates a DualRetexturingBakedModel
+ * using two parent models (first = base, second = accent).
  */
 public class UnbakedDualRetexturedModel extends UnbakedAutoRetexturedModel {
     private final Identifier firstParentId;
@@ -29,17 +30,9 @@ public class UnbakedDualRetexturedModel extends UnbakedAutoRetexturedModel {
     }
 
     @Override
-    public BakedModel bake(Baker baker, Function<SpriteIdentifier, Sprite> spriteLookup, ModelBakeSettings modelBakeSettings, BakedModel wrappedModel, TemplateAppearanceManager tam) {
-        // Bake the first model using the parent class
-        BakedModel firstBaked = super.bake(baker, spriteLookup, modelBakeSettings, wrappedModel, tam);
-
-        // Bake the second parent model
-        BakedModel secondWrappedModel = baker.bake(secondParentId, modelBakeSettings);
-
-        // Bake the second model
-        BakedModel secondBaked = secondModel.bake(baker, spriteLookup, modelBakeSettings, secondWrappedModel, tam);
-
-        // Create our dual retexturing baked model
+    public BakedModel bake(Baker baker, Function<SpriteIdentifier, Sprite> spriteLookup, ModelBakeSettings settings, BakedModel wrappedModel, TemplateAppearanceManager tam) {
+        BakedModel firstBaked = super.bake(baker, spriteLookup, settings, wrappedModel, tam);
+        BakedModel secondBaked = secondModel.bake(baker, spriteLookup, settings, firstBaked, tam);
         return new DualRetexturingBakedModel(firstBaked, secondBaked);
     }
 
