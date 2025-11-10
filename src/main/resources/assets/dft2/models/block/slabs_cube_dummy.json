@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "dft2:block/framed_block"
+    "particle": "dft2:block/framed_block",
+    "down": "dft2:block/framed_block",
+    "up": "dft2:block/framed_block",
+    "north": "dft2:block/framed_block",
+    "south": "dft2:block/framed_block",
+    "west": "dft2:block/framed_block",
+    "east": "dft2:block/framed_block"
   }
 }
