@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "templates:slab"
+    }
+  },
+  "result": {
+    "id": "dft2:slabs_cube",
+    "count": 1
+  }
+}

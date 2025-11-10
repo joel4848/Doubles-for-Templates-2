@@ -1,44 +1,45 @@
 {
-	"schemaVersion": 1,
-	"id": "dft2",
-	"version": "${version}",
-	"name": "DFT2",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/dft2/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.joel4848.dft2.DFT2"
-		],
-		"client": [
-			"com.joel4848.dft2.DFT2Client"
-		],
-		"fabric-datagen": [
-			"com.joel4848.dft2.DFT2DataGenerator"
-		]
-	},
-	"mixins": [
-		"dft2.mixins.json",
-		{
-			"config": "dft2.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.17.3",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "dft2",
+  "version": "${version}",
+  "name": "Dual-texture Frames for Templates 2",
+  "description": "Adds dual-texture blocks to Templates 2",
+  "authors": [
+    "joel4848"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/dft2/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.joel4848.dft2.DFT2"
+    ],
+    "client": [
+      "com.joel4848.dft2.DFT2Client"
+    ],
+    "fabric-datagen": [
+      "com.joel4848.dft2.DFT2DataGenerator"
+    ]
+  },
+  "mixins": [
+    "dft2.mixins.json",
+    {
+      "config": "dft2.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "templates": ">=2.0.0"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }
